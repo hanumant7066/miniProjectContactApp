@@ -10,19 +10,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form action="saveinfo" modelAttribute="contact" method="POST">
+	<form:form action="saveinfo?id=${contact.contactId}" modelAttribute="contact" method="POST">
 		<table>
 			<tr>
 				<td>Contact Name :</td>
-				<td><form:input path="contactName" /></td>
+				<td><form:input path="contactName" value="${contact.contactName}"/></td>
 			</tr>
 			<tr>
 				<td>Contact EMAIL :</td>
-				<td><form:input path="contactEmail" /></td>
+				<td><form:input path="contactEmail" value="${contact.contactEmail}" /></td>
 			</tr>
 			<tr>
 				<td>Contact Number :</td>
-				<td><form:input path="contactNumber" /></td>
+				<td><form:input path="contactNumber" value="${contact.contactNumber}"/></td>
 			</tr>
 
 			<tr>

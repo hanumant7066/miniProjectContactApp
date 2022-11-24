@@ -21,9 +21,9 @@ public class Contact {
 
 	private String contactEmail;
 
-	private long contactNumber;
+	private Long contactNumber;
 
-	private Character ActiveSwitch;
+	private String activeSwitch;
 
 	private LocalDate createDate;
 
@@ -53,20 +53,20 @@ public class Contact {
 		this.contactEmail = contactEmail;
 	}
 
-	public long getContactNumber() {
+	public Long getContactNumber() {
 		return contactNumber;
 	}
 
-	public void setContactNumber(long contactNumber) {
+	public void setContactNumber(Long contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 
-	public Character getActiveSwitch() {
-		return ActiveSwitch;
+	public String getActiveSwitch() {
+		return activeSwitch;
 	}
 
-	public void setActiveSwitch(Character activeSwitch) {
-		ActiveSwitch = activeSwitch;
+	public void setActiveSwitch(String activeSwitch) {
+		this.activeSwitch = activeSwitch;
 	}
 
 	public LocalDate getCreateDate() {
@@ -85,14 +85,14 @@ public class Contact {
 		this.updateDate = updateDate;
 	}
 
-	public Contact(Integer contactId, String contactName, String contactEmail, long contactNumber,
-			Character activeSwitch, LocalDate createDate, LocalDate updateDate) {
+	public Contact(Integer contactId, String contactName, String contactEmail, Long contactNumber,
+			String activeSwitch, LocalDate createDate, LocalDate updateDate) {
 		super();
 		this.contactId = contactId;
 		this.contactName = contactName;
 		this.contactEmail = contactEmail;
 		this.contactNumber = contactNumber;
-		ActiveSwitch = activeSwitch;
+		this.activeSwitch = activeSwitch;
 		this.createDate = createDate;
 		this.updateDate = updateDate;
 	}
@@ -104,7 +104,7 @@ public class Contact {
 	@Override
 	public String toString() {
 		return "Contact [contactId=" + contactId + ", contactName=" + contactName + ", contactEmail=" + contactEmail
-				+ ", contactNumber=" + contactNumber + ", ActiveSwitch=" + ActiveSwitch + ", createDate=" + createDate
+				+ ", contactNumber=" + contactNumber + ", ActiveSwitch=" + activeSwitch + ", createDate=" + createDate
 				+ ", updateDate=" + updateDate + "]";
 	}
 
